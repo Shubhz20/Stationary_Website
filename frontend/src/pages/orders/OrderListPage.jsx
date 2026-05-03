@@ -51,7 +51,7 @@ export default function OrderListPage() {
     setSearchParams(params);
   };
 
-  const statuses = ['pending', 'confirmed', 'processing', 'shipped', 'delivered', 'cancelled', 'rejected'];
+  const statuses = ['pending_payment', 'confirmed', 'processing', 'shipped', 'out_for_delivery', 'delivered', 'cancelled', 'rejected'];
 
   return (
     <div className="order-list-page">

@@ -117,7 +117,7 @@ export default function AdminDashboard() {
     { label: 'Orders Today', value: stats.ordersToday ?? 0, icon: FiPackage, color: '#2563eb' },
     { label: 'Revenue Today', value: formatPrice(stats.revenueToday ?? 0), icon: FiDollarSign, color: '#059669' },
     { label: 'Revenue This Month', value: formatPrice(stats.revenueMonth ?? 0), icon: FiDollarSign, color: '#7c3aed' },
-    { label: 'Pending Orders', value: stats.ordersByStatus?.pending ?? 0, icon: FiRefreshCw, color: '#f59e0b' },
+    { label: 'Pending Orders', value: stats.ordersByStatus?.pending_payment ?? 0, icon: FiRefreshCw, color: '#f59e0b' },
     { label: 'Total Users', value: stats.totalUsers ?? 0, icon: FiUsers, color: '#6366f1' },
     { label: 'Low Stock Items', value: stats.lowStockCount ?? 0, icon: FiAlertTriangle, color: '#ef4444' },
   ] : [];
@@ -143,7 +143,7 @@ export default function AdminDashboard() {
       <div className="admin-section">
         <h2>Order Management</h2>
         <div className="olp-filters">
-          {['', 'pending', 'confirmed', 'processing', 'shipped', 'delivered', 'cancelled', 'rejected'].map((s) => (
+          {['', 'pending_payment', 'confirmed', 'processing', 'shipped', 'out_for_delivery', 'delivered', 'cancelled', 'rejected'].map((s) => (
             <button
               key={s}
               className={`chip ${orderStatus === s ? 'active' : ''}`}
@@ -181,7 +181,7 @@ export default function AdminDashboard() {
                       <td className="capitalize">{order.paymentMethod}</td>
                       <td><StatusBadge status={order.status} /></td>
                       <td className="action-cell">
-                        {order.status === 'pending' && (
+                        {order.status === 'pending_payment' && (
                           <>
                             <button
                               onClick={() => handleAccept(order._id)}

@@ -34,7 +34,7 @@ export default function Navbar() {
               )}
 
               {isDelivery && (
-                <Link to="/delivery" className="nav-link">
+                <Link to="/deliveries" className="nav-link">
                   <FiTruck /> My Deliveries
                 </Link>
               )}

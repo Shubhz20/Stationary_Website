@@ -57,7 +57,7 @@ export default function App() {
         </Route>
 
         {/* Delivery partner routes */}
-        <Route element={<ProtectedRoute allowedRoles={['delivery_partner']} />}>
+        <Route element={<ProtectedRoute allowedRoles={['delivery']} />}>
           <Route path="/deliveries" element={<DeliveryDashboard />} />
         </Route>
       </Route>

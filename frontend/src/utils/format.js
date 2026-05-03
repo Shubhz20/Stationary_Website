@@ -43,6 +43,16 @@ export const STATUS_CONFIG = {
   cancelled: { label: 'Cancelled', color: '#ef4444', bg: '#fee2e2' },
   rejected: { label: 'Rejected', color: '#dc2626', bg: '#fecaca' },
   refunded: { label: 'Refunded', color: '#6b7280', bg: '#f3f4f6' },
+
+  // Payment statuses
+  pending: { label: 'Pending', color: '#f59e0b', bg: '#fef3c7' },
+  paid: { label: 'Paid', color: '#10b981', bg: '#d1fae5' },
+  failed: { label: 'Failed', color: '#ef4444', bg: '#fee2e2' },
+
+  // Delivery statuses
+  assigned: { label: 'Assigned', color: '#3b82f6', bg: '#dbeafe' },
+  picked_up: { label: 'Picked Up', color: '#8b5cf6', bg: '#ede9fe' },
+  in_transit: { label: 'In Transit', color: '#6366f1', bg: '#e0e7ff' },
 };
 
 export function getStatusConfig(status) {

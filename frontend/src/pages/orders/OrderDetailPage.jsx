@@ -106,7 +106,7 @@ export default function OrderDetailPage() {
   if (loading) return <Spinner />;
   if (!order) return <div className="page-container"><p>Order not found.</p></div>;
 
-  const canCancel = ['pending', 'confirmed'].includes(order.status);
+  const canCancel = ['pending_payment', 'confirmed'].includes(order.status);
   const canReview = order.status === 'delivered';
 
   return (

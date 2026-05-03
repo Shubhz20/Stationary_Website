@@ -107,9 +107,17 @@ function createApp() {
   // ── Static file serving (uploaded images, invoice PDFs) ──
   app.use('/uploads', express.static(path.resolve(config.upload.dir)));
 
-  // ── Health check ──
+  // ── Health check (for load balancers & monitoring) ──
   app.get('/health', (req, res) => {
-    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+    const mongoose = require('mongoose');
+    const dbState = mongoose.connection.readyState; // 0=disconnected, 1=connected, 2=connecting, 3=disconnecting
+    const healthy = dbState === 1;
+    res.status(healthy ? 200 : 503).json({
+      status: healthy ? 'ok' : 'degraded',
+      timestamp: new Date().toISOString(),
+      uptime: Math.floor(process.uptime()),
+      mongo: healthy ? 'connected' : 'disconnected',
+    });
   });
 
   // ── API routes ──
