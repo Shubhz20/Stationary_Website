@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://stationery-api.onrender.com/api/:path*" },
+    { "source": "/uploads/:path*", "destination": "https://stationery-api.onrender.com/uploads/:path*" }
+  ]
+}

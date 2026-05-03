@@ -21,7 +21,11 @@ export function SocketProvider({ children }) {
     const token = getAccessToken();
     if (!token) return;
 
-    const newSocket = io(window.location.origin, {
+    // In production, connect directly to backend URL (Vercel rewrites don't support WebSockets)
+    // In development, Vite proxy handles it via same origin
+    const serverUrl = import.meta.env.VITE_API_URL || window.location.origin;
+
+    const newSocket = io(serverUrl, {
       auth: { token },
       transports: ['websocket', 'polling'],
       reconnection: true,
