@@ -1,0 +1,51 @@
+.delivery-dashboard { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+.delivery-dashboard h1 { font-size: 1.8rem; color: #111827; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+
+.dd-section { margin-bottom: 2rem; }
+.dd-section h2 { font-size: 1.2rem; color: #374151; margin-bottom: 1rem; }
+
+.delivery-cards { display: flex; flex-direction: column; gap: 1rem; }
+
+.delivery-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+}
+.active-delivery { border-left: 4px solid #2563eb; }
+.completed-delivery { opacity: 0.7; }
+
+.dc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; }
+.dc-order { font-weight: 700; color: #111827; }
+
+.dc-address { display: flex; align-items: flex-start; gap: 0.4rem; font-size: 0.9rem; color: #374151; margin-bottom: 0.6rem; }
+.dc-address svg { flex-shrink: 0; margin-top: 0.15rem; color: #6b7280; }
+
+.dc-meta { display: flex; gap: 1.5rem; font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem; }
+
+/* Status progress bar */
+.status-progress { display: flex; gap: 0; margin-bottom: 1rem; }
+.progress-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-size: 0.7rem;
+  color: #9ca3af;
+  text-transform: capitalize;
+}
+.progress-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  margin-bottom: 0.3rem;
+  position: relative;
+  z-index: 1;
+}
+.progress-step.done .progress-dot { background: #2563eb; }
+.progress-step.current .progress-dot { background: #2563eb; box-shadow: 0 0 0 4px rgba(37,99,235,0.2); }
+.progress-step.done span { color: #111827; font-weight: 600; }
+
+.dc-actions { display: flex; gap: 0.8rem; }

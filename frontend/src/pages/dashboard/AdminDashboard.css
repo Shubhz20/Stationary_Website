@@ -1,0 +1,68 @@
+.admin-dashboard { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+.admin-dashboard h1 { font-size: 1.8rem; color: #111827; margin-bottom: 1.5rem; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-top: 3px solid;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+}
+.stat-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.stat-value { font-size: 1.6rem; font-weight: 800; color: #111827; margin-bottom: 0.2rem; }
+.stat-label { font-size: 0.8rem; color: #6b7280; }
+
+.admin-section { margin-bottom: 2rem; }
+.admin-section h2 { font-size: 1.3rem; color: #111827; margin-bottom: 1rem; }
+
+.admin-orders-table { overflow-x: auto; margin-bottom: 1.5rem; }
+.admin-orders-table table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.admin-orders-table th {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  background: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+.admin-orders-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+}
+.text-right { text-align: right; }
+.capitalize { text-transform: capitalize; }
+.order-link { color: #2563eb; text-decoration: none; font-weight: 600; }
+.order-link:hover { text-decoration: underline; }
+
+.action-cell { display: flex; gap: 0.4rem; }
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.action-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.action-btn.accept { color: #059669; }
+.action-btn.accept:hover { background: #d1fae5; border-color: #059669; }
+.action-btn.reject { color: #ef4444; }
+.action-btn.reject:hover { background: #fef2f2; border-color: #ef4444; }
+.action-btn.assign { color: #2563eb; }
+.action-btn.assign:hover { background: #dbeafe; border-color: #2563eb; }

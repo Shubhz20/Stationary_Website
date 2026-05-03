@@ -1,11 +1,13 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
+const compression = require('compression');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const mongoSanitize = require('express-mongo-sanitize');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
+const correlationId = require('./middleware/correlationId');
 
 const config = require('./config/env');
 const logger = require('./config/logger');
@@ -28,6 +30,12 @@ function createApp() {
 
   // ── Trust proxy (for rate limiting behind nginx/LB) ──
   app.set('trust proxy', 1);
+
+  // ── Correlation ID (for request tracing) ──
+  app.use(correlationId);
+
+  // ── Gzip compression ──
+  app.use(compression());
 
   // ── Security headers ──
   app.use(helmet());

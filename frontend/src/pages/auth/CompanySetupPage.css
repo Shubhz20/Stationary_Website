@@ -1,0 +1,37 @@
+.company-setup-page { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+.company-setup-page h1 { font-size: 1.8rem; color: #111827; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+.company-subtitle { color: #6b7280; margin-bottom: 2rem; }
+
+.company-form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.company-form fieldset {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.company-form legend {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #111827;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.remove-addr-btn { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 0.8rem; font-weight: 600; }
+.remove-addr-btn:hover { text-decoration: underline; }
+
+.form-row { display: flex; gap: 1rem; margin-bottom: 0.8rem; }
+.form-row .form-group { flex: 1; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+@media (max-width: 600px) {
+  .two-col, .three-col { grid-template-columns: 1fr; }
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-group label { font-size: 0.85rem; font-weight: 600; color: #374151; }
+
+.add-addr-btn { align-self: flex-start; }
