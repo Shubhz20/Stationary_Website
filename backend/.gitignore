@@ -1,0 +1,12 @@
+node_modules/
+.env
+uploads/products/*
+uploads/invoices/*
+uploads/deliveries/*
+!uploads/products/.gitkeep
+!uploads/invoices/.gitkeep
+!uploads/deliveries/.gitkeep
+logs/
+*.log
+coverage/
+.DS_Store
