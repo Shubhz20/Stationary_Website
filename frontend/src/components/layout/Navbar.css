@@ -1,0 +1,152 @@
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.nav-link:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn {
+  background: #2563eb;
+  color: #fff !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+  color: #fff !important;
+}
+
+.nav-user-menu {
+  position: relative;
+}
+
+.nav-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1px solid #e5e7eb;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.nav-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.nav-username {
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.4rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 200;
+  padding: 0.4rem 0;
+}
+
+.nav-user-menu:hover .nav-dropdown {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #374151;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.logout-btn {
+  color: #ef4444;
+}
